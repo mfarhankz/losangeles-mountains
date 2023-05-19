@@ -1,4 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Lato:ital,wght@0,400;0,700;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500&family=Lato:ital,wght@0,400;0,700;1,400&display=swap');
+
+
 body{
     font-family: 'Inter', sans-serif;
     font-family: 'Lato', sans-serif;
@@ -17,7 +19,7 @@ header{
     width: 100%;
     position: fixed;
     top: 0;
-    padding: 10px 0;
+    padding: 7px 0;
     z-index: 999;
 }
 
@@ -87,4 +89,38 @@ footer{
     margin: 0 !important;
     padding: 13px 0;
     color: #63769d;
+}
+
+.number_description{
+    background-color: #fff;
+    margin-top: 76px;
+    display: inline-block;
+    width: 100%;
+}
+
+.number_description span {
+    font-size: 200px;
+    font-family: 'Bebas Neue', sans-serif;
+    position: relative;
+    color: #414f6b94;
+    margin-right: 70px;
+    line-height: 200px;
+}
+
+.number_description span small {
+    font-size: 50px;
+    position: absolute;
+    bottom: 65px;
+    right: -31px;
+    color: #414f6b;
+    line-height: 75px;
+}
+
+.number_description .inline{
+    
+    display: inline-block;
+    width: 50%;
+    position: relative;
+    top: -50px;
+
 }
