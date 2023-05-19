@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="./assets/styles/style.css" rel="stylesheet">
+
+    <title>Hello, world!</title>
+  </head>
+  <body>
+    <section class="main_banner" id="home">
+        <header id="navbar">
+            <navbar class="navbar navbar-expand-lg navbar-light">
+                <div class="container">
+                    <a href="#home" class="navbar-brand"></a>
+                    <div class="navbar-collapse">
+                        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                            <li class="nav-item">
+                            <a class="nav-link" href="#page_1">01. history</a>
+                            </li>
+                            <li class="nav-item">
+                            <a class="nav-link" href="#page_2">02. team</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </navbar>
+        </header>
+    </section>
+
+    <section class="slider_section" id="page_1">
+
+    </section>
+
+    <section class="schedule_section" id="page_2">
+
+        <footer>
+
+        </footer>
+
+    </section>
+
+    <script>
+        window.onscroll = function() {myFunction()};
+        
+        var navbar = document.getElementById("navbar");
+        var sticky = 200;
+        function myFunction() {
+          if (window.pageYOffset >= sticky) {
+            navbar.classList.add("sticky")
+          } else {
+            navbar.classList.remove("sticky");
+          }
+        }
+        </script>
+  </body>
+</html>
