@@ -53,11 +53,15 @@ header.sticky .nav-link{
 }
 
 .slider_section{
-    background: url("../images/second_banner.png") no-repeat;
+    /* background: url("../images/second_banner.png") no-repeat; */
     background-size: cover;
     width: 100%;
-    min-height: 100vh;
+    max-height: 100vh;
     display: block;
+}
+
+.carousel-indicators {
+    margin-bottom: 30rem !important;
 }
 
 .schedule_section{
