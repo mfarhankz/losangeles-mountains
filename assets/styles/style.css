@@ -61,7 +61,7 @@ header.sticky .nav-link{
 }
 
 .schedule_section{
-    background: url("../images/thired_banner.png") no-repeat;
+    background: url("../images/thired_banner_2.png") no-repeat;
     background-size: cover;
     width: 100%;
     min-height: 100vh;
@@ -128,12 +128,17 @@ footer{
 
 .tabs_list{
     background-color: #414f6b;
+    
+}
+.tabs_list .nav-tabs{
+    border: none !important;
 }
 .tabs_list .nav-link{
     padding: 10px 40px !important;
     border-radius: 0 !important;
     cursor: pointer;
     color: #b0b4be !important;
+    margin: 0 !important;
 }
 .tabs_list .nav-link.active {
     background-color: #b0b4be;

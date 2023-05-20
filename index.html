@@ -56,30 +56,49 @@
             <div class="container">
                 <ul class="nav nav-tabs">
                     <li class="nav-item">
-                      <a class="nav-link active">MOUNTAIN 1</a>
+                      <a class="nav-link active tablinks" onclick="openCity(event, 'london')" id="defaultOpen">MOUNTAIN 1</a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link">MOUNTAIN 2</a>
+                      <a class="nav-link tablinks" onclick="openCity(event, 'paris')">MOUNTAIN 2</a>
                     </li>
                   </ul>
             </div>
         </div>
 
+
         <div class="tab_container">
             <div class="container">
-                <div class="box">
+                <div class="box tabcontent" id="london">
                     <h3>SCHEDULE</h3>
                     <dl>
                         <dt>17 Nov 2016</dt>
                         <dd class="divider">Vestibulum viverra</dd>
                         
-                        <dt>17 Nov 2016</dt>
+                        <dt>25 Nov 2016</dt>
                         <dd>Vestibulum viverra</dd>
 
-                        <dt>17 Nov 2016</dt>
+                        <dt>31 Nov 2016</dt>
                         <dd class="divider">Vestibulum viverra</dd>
 
-                        <dt>17 Nov 2016</dt>
+                        <dt>2 Dec 2016</dt>
+                        <dd>Vestibulum viverra</dd>
+
+                    </dl>
+                </div>
+
+                <div class="box tabcontent" id="paris">
+                    <h3>SCHEDULE</h3>
+                    <dl>
+                        <dt>03 Jan 2016</dt>
+                        <dd class="divider">Vestibulum viverra</dd>
+                        
+                        <dt>19 Jan 2016</dt>
+                        <dd>Vestibulum viverra</dd>
+
+                        <dt>28 Feb 2016</dt>
+                        <dd class="divider">Vestibulum viverra</dd>
+
+                        <dt>01 Mar 2016</dt>
                         <dd>Vestibulum viverra</dd>
 
                     </dl>
@@ -96,18 +115,45 @@
 
     </section>
 
-    <script>
-        window.onscroll = function() {myFunction()};
-        
-        var navbar = document.getElementById("navbar");
-        var sticky = 200;
-        function myFunction() {
-          if (window.pageYOffset >= sticky) {
-            navbar.classList.add("sticky")
-          } else {
-            navbar.classList.remove("sticky");
-          }
-        }
+        <script>
+            window.onscroll = function() {myFunction()};
+            
+            var navbar = document.getElementById("navbar");
+            var sticky = 200;
+            function myFunction() {
+            if (window.pageYOffset >= sticky) {
+                navbar.classList.add("sticky")
+            } else {
+                navbar.classList.remove("sticky");
+            }
+            }
+
+            function openCity(evt, cityName) {
+                var i, tabcontent, tablinks;
+                tabcontent = document.getElementsByClassName("tabcontent");
+                for (i = 0; i < tabcontent.length; i++) {
+                    tabcontent[i].style.display = "none";
+                }
+                tablinks = document.getElementsByClassName("tablinks");
+                for (i = 0; i < tablinks.length; i++) {
+                    tablinks[i].className = tablinks[i].className.replace(" active", "");
+                }
+                document.getElementById(cityName).style.display = "block";
+                evt.currentTarget.className += " active";
+
+                // Change the background image of .schedule_section based on the selected tab
+                var imageSource;
+                if (cityName === "london") {
+                    imageSource = "./assets/images/thired_banner.png";
+                } else if (cityName === "paris") {
+                    imageSource = "./assets/images/thired_banner_2.png";
+                }
+                document.querySelector(".schedule_section").style.backgroundImage = "url('" + imageSource + "')";
+            }
+
+            // Get the element with id="defaultOpen" and click on it
+            document.getElementById("defaultOpen").click();
+
         </script>
   </body>
 </html>
